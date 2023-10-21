@@ -40,15 +40,15 @@ const seedDB = async () => {
       },
       images: [
         {
-          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697913746/TourTales/yqvjwt41k1kplsltkuny.jpg",
+          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697920661/TourTales/lwfbahqgmwprduatfbod.jpg",
           filename: "TourTales/yqvjwt41k1kplsltkuny",
         },
         {
-          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697913749/TourTales/subn4fg9tg5xyn3fwnrw.jpg",
+          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697915167/TourTales/friluslblzdafj2tensu.jpg",
           filename: "TourTales/subn4fg9tg5xyn3fwnrw",
         },
         {
-          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697913753/TourTales/dsyvqe3urfgsmhhtxrpl.jpg",
+          url: "https://res.cloudinary.com/dxrqlovbo/image/upload/v1697919896/TourTales/xoswwrbxpn0q5tkvojxc.jpg",
           filename: "TourTales/dsyvqe3urfgsmhhtxrpl",
         },
       ],
