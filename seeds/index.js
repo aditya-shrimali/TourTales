@@ -1,7 +1,7 @@
 const cities = require("./cities");
 const { places, descriptors } = require("./seedHelpers");
 const mongoose = require("mongoose");
-const Campground = require("../models/campground");
+const Place = require("../models/place");
 
 mongoose.connect(
   "mongodb+srv://shrimaliaditya013:C1YScslESNFEnkWq@cluster0.dejhjin.mongodb.net/?retryWrites=true&w=majority",
@@ -20,7 +20,7 @@ db.once("open", () => {
 const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
-  await Campground.deleteMany({});
+  await Place.deleteMany({});
 };
 
 seedDB().then(() => {

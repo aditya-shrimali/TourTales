@@ -2,9 +2,9 @@
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 <div class="row">
   <div class="col-6">
-    <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
+    <div id="placeCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <% campground.images.forEach((img, i) => { %>
+        <% place.images.forEach((img, i) => { %>
         <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
           <img
             crossorigin="anonymous"
@@ -15,10 +15,10 @@
         </div>
         <% }) %>
       </div>
-      <% if(campground.images.length > 1) {%>
+      <% if(place.images.length > 1) {%>
       <a
         class="carousel-control-prev"
-        href="#campgroundCarousel"
+        href="#placeCarousel"
         role="button"
         data-slide="prev"
       >
@@ -27,7 +27,7 @@
       </a>
       <a
         class="carousel-control-next"
-        href="#campgroundCarousel"
+        href="#placeCarousel"
         role="button"
         data-slide="next"
       >
@@ -39,26 +39,26 @@
 
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title"><%= campground.title%></h5>
-        <p class="card-text"><%= campground.description%></p>
+        <h5 class="card-title"><%= place.title%></h5>
+        <p class="card-text"><%= place.description%></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted"><%= campground.location%></li>
+        <li class="list-group-item text-muted"><%= place.location%></li>
         <li class="list-group-item">
-          Submitted by - <%= campground.author.username%>
+          Submitted by - <%= place.author.username%>
         </li>
-        <li class="list-group-item">₹<%= campground.price%>/person</li>
+        <li class="list-group-item">₹<%= place.price%>/person</li>
       </ul>
-      <% if( currentUser && campground.author.equals(currentUser._id)) {%>
+      <% if( currentUser && place.author.equals(currentUser._id)) {%>
       <div class="card-body">
         <a
           class="card-link btn btn-info"
-          href="/campgrounds/<%=campground._id%>/edit"
+          href="/places/<%=place._id%>/edit"
           >Edit</a
         >
         <form
           class="d-inline"
-          action="/campgrounds/<%=campground._id%>?_method=DELETE"
+          action="/places/<%=place._id%>?_method=DELETE"
           method="POST"
         >
           <button class="btn btn-danger">Delete</button>
@@ -74,7 +74,7 @@
     <% if(currentUser){ %>
     <h2>Leave a Review</h2>
     <form
-      action="/campgrounds/<%=campground._id%>/reviews"
+      action="/places/<%=place._id%>/reviews"
       method="POST"
       class="mb-3 validated-form"
       novalidate
@@ -114,7 +114,7 @@
       </div>
       <button class="btn btn-success">Submit</button>
     </form>
-    <% } %> <% for(let review of campground.reviews) { %>
+    <% } %> <% for(let review of place.reviews) { %>
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title"><%= review.author.username%></h5>
@@ -124,7 +124,7 @@
         <p class="card-text">Review: <%= review.body %></p>
         <% if( currentUser && review.author.equals(currentUser._id)) {%>
         <form
-          action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE"
+          action="/places/<%=place._id%>/reviews/<%=review._id%>?_method=DELETE"
           method="POST"
         >
           <button class="btn btn-sm btn-danger">Delete</button>
@@ -138,7 +138,7 @@
 
 <script>
   const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-  const campground = <%- JSON.stringify(campground) %>
+  const place = <%- JSON.stringify(place) %>
 </script>
 
 <script src="/javascripts/showPageMap.js"></script>

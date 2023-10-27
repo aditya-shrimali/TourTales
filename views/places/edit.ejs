@@ -1,9 +1,10 @@
 <% layout('layouts/boilerplate')%>
+
 <div class="row">
-  <h1 class="text-center">New Place</h1>
+  <h1 class="text-center">Edit Place</h1>
   <div class="col-md-6 offset-md-3">
     <form
-      action="/campgrounds"
+      action="/places/<%= place._id%>?_method=PUT"
       method="POST"
       novalidate
       class="validated-form"
@@ -15,7 +16,8 @@
           class="form-control"
           type="text"
           id="title"
-          name="campground[title]"
+          name="place[title]"
+          value="<%=place.title %>"
           required
         />
         <div class="valid-feedback">Looks good!</div>
@@ -26,7 +28,8 @@
           class="form-control"
           type="text"
           id="location"
-          name="campground[location]"
+          name="place[location]"
+          value="<%=place.location %>"
           required
         />
         <div class="valid-feedback">Looks good!</div>
@@ -43,7 +46,8 @@
             placeholder="0.00"
             aria-label="price"
             aria-describedby="price-label"
-            name="campground[price]"
+            name="place[price]"
+            value="<%=place.price %>"
             required
           />
           <div class="valid-feedback">Looks good!</div>
@@ -56,9 +60,11 @@
           class="form-control"
           type="text"
           id="description"
-          name="campground[description]"
+          name="place[description]"
           required
-        ></textarea>
+        >
+<%= place.description %></textarea
+        >
         <div class="valid-feedback">Looks good!</div>
       </div>
       <div class="mb-3">
@@ -72,16 +78,34 @@
           />
           <label class="form-file-label" for="image">
             <span class="form-file-text custom-file-label"
-              >Choose images...</span
+              >Add more images...</span
             >
             <span class="form-file-button">Browse</span>
           </label>
         </div>
       </div>
       <div class="mb-3">
-        <button class="btn btn-success">Add Place</button>
+        <% place.images.forEach(function(img,i){ %>
+        <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="" />
+        <div class="form-check-inline">
+          <input
+            type="checkbox"
+            id="image-<%= i %>"
+            name="deleteImages[]"
+            value="<%= img.filename %>"
+          />
+        </div>
+        <label for="image-<%= i %>">Delete</label>
+        <% }) %>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Update Place</button>
       </div>
     </form>
-    <a href="/campgrounds" class="btn btn-primary d-block mb-2">All Places</a>
+    <a
+      href="/places/<%= place._id %>"
+      class="btn btn-primary mb-2 d-block"
+      >Back to Places</a
+    >
   </div>
 </div>

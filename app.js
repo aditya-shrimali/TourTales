@@ -14,7 +14,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
-const campgroundRoutes = require("./routes/campgrounds");
+const placeRoutes = require("./routes/places");
 const reviewRoutes = require("./routes/reviews");
 const userRoutes = require("./routes/users");
 const helmet = require("helmet");
@@ -137,8 +137,8 @@ app.use((req, res, next) => {
 });
 
 app.use("/", userRoutes);
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/reviews", reviewRoutes);
+app.use("/places", placeRoutes);
+app.use("/places/:id/reviews", reviewRoutes);
 
 app.get("/", (req, res) => {
   res.render("home");
