@@ -37,6 +37,6 @@
     "sanitize-html": "^2.11.0"
   },
   "engines": {
-    "node": "21.6.1" 
+    "node": "18.x" 
   }
 }
