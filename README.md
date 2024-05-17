@@ -33,8 +33,10 @@ npm start
 Your app should now be running on localhost:3000.
 
 \*Images
-<img width="1409" alt="Screenshot 2024-01-27 at 1 23 10 PM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/e15b75c5-077c-4c98-a05f-dd2fc9374337">
-<img width="1420" alt="Screenshot 2024-01-27 at 1 23 36 PM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/b1521a49-4c9a-4eb1-9883-0d7ce2baab18">
+<img width="1328" alt="Screenshot 2024-05-03 at 10 11 26 PM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/c8e3b29a-227c-40bf-a6de-689b9d74e65f">
+<img width="1440" alt="Screenshot 2024-05-17 at 10 34 34 AM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/95cf4be9-e1a3-49b6-ac73-9d9ff73557a4">
+
+
 
 ## Contributing
 
