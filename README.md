@@ -35,6 +35,7 @@ Your app should now be running on localhost:3000.
 \*Images
 <img width="1328" alt="Screenshot 2024-05-03 at 10 11 26 PM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/c8e3b29a-227c-40bf-a6de-689b9d74e65f">
 <img width="1440" alt="Screenshot 2024-05-17 at 10 34 34 AM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/95cf4be9-e1a3-49b6-ac73-9d9ff73557a4">
+<img width="1440" alt="Screenshot 2024-05-17 at 10 39 02 AM" src="https://github.com/aditya-shrimali/TourTales/assets/99111197/9457590f-ebf0-41c2-9b0d-cdd808caa2c1">
 
 
 
